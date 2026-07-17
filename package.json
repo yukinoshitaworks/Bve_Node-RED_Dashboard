@@ -1,0 +1,29 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "@background404/node-red-contrib-wsl-ubuntu": "~0.0.3",
+        "node-red-contrib-dashboard-average-bars": "~0.0.6",
+        "node-red-contrib-dashboard-bar-chart-data": "~0.9.94",
+        "node-red-contrib-jma-weather": "~0.0.7",
+        "node-red-contrib-locapack": "~0.0.7",
+        "node-red-contrib-mdashboard": "~2.19.4-beta",
+        "node-red-contrib-mqtt-broker": "~0.2.9",
+        "node-red-contrib-stoptimer": "~0.0.7",
+        "node-red-contrib-timerswitch": "~1.4.0",
+        "node-red-contrib-ui-clock": "~1.0.2",
+        "node-red-contrib-ui-digital-clock": "~1.0.0",
+        "node-red-contrib-ui-led": "~0.4.11",
+        "node-red-contrib-ui-led2": "~0.4.19",
+        "node-red-contrib-ui-level": "~0.1.46",
+        "node-red-contrib-ui-navbar": "~1.0.11",
+        "node-red-contrib-uibuilder": "~7.5.0",
+        "node-red-contrib-web-worldmap": "~5.5.3",
+        "node-red-dashboard": "~3.6.6",
+        "node-red-iot-mqtt-api": "~1.0.1",
+        "node-red-node-openweathermap": "~1.0.1",
+        "node-red-node-ui-table": "~0.4.5"
+    }
+}

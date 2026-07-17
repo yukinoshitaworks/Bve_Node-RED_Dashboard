@@ -1,0 +1,1292 @@
+[
+    {
+        "id": "584a8e8db72522a6",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d22d2fb33e8b9069",
+        "type": "ui_tab",
+        "name": "Bveブラウザモニタ",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "272ccc14225d6b3e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED ダッシュボード",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "YYYY/MM/DD",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "cbe896aea1f4f9c1",
+        "type": "ui_tab",
+        "name": "ホーム",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4a40add566da79ce",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e4077180251266fb",
+        "type": "ui_group",
+        "name": "運転情報",
+        "tab": "d22d2fb33e8b9069",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bd3e4543abab3743",
+        "type": "inject",
+        "z": "584a8e8db72522a6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 370,
+        "y": 40,
+        "wires": [
+            [
+                "35fcf25be2f1f4c3"
+            ]
+        ]
+    },
+    {
+        "id": "35fcf25be2f1f4c3",
+        "type": "debug",
+        "z": "584a8e8db72522a6",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "770dd2018ebd84a4",
+        "type": "debug",
+        "z": "584a8e8db72522a6",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "49463205c9c097e9",
+        "type": "mqtt in",
+        "z": "584a8e8db72522a6",
+        "name": "time",
+        "topic": "bve/time",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "4a40add566da79ce",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 180,
+        "wires": [
+            [
+                "15281b9ca9c9f020"
+            ]
+        ]
+    },
+    {
+        "id": "3fbaa904abae644e",
+        "type": "mqtt out",
+        "z": "584a8e8db72522a6",
+        "name": "",
+        "topic": "test/topic",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4a40add566da79ce",
+        "x": 640,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "623f31de0874cc95",
+        "type": "mqtt in",
+        "z": "584a8e8db72522a6",
+        "name": "",
+        "topic": "bve/location",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "4a40add566da79ce",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 300,
+        "wires": [
+            [
+                "2ad016cc36ef20d6"
+            ]
+        ]
+    },
+    {
+        "id": "a88be07501ef8b95",
+        "type": "mqtt in",
+        "z": "584a8e8db72522a6",
+        "name": "",
+        "topic": "bve/speed",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "4a40add566da79ce",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 500,
+        "wires": [
+            [
+                "a64e71ba3675bc72"
+            ]
+        ]
+    },
+    {
+        "id": "ca91750f8bbd2eda",
+        "type": "mqtt in",
+        "z": "584a8e8db72522a6",
+        "name": "",
+        "topic": "bve/pilot",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "4a40add566da79ce",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 660,
+        "wires": [
+            [
+                "e6a6fc3868dc6b64",
+                "579be1cf06047519"
+            ]
+        ]
+    },
+    {
+        "id": "119806d6c47a7a3f",
+        "type": "debug",
+        "z": "584a8e8db72522a6",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c446e715ee3643cf",
+        "type": "ui_text",
+        "z": "584a8e8db72522a6",
+        "group": "e4077180251266fb",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "距離程",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "16",
+        "color": "#000000",
+        "x": 730,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "c3cb711e8427eb0e",
+        "type": "debug",
+        "z": "584a8e8db72522a6",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "e6a6fc3868dc6b64",
+        "type": "debug",
+        "z": "584a8e8db72522a6",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "b82f6a318d395e2f",
+        "type": "ui_gauge",
+        "z": "584a8e8db72522a6",
+        "name": "",
+        "group": "e4077180251266fb",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "速度",
+        "label": "km/h",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "160",
+        "colors": [
+            "#00b500",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "125",
+        "diff": false,
+        "className": "",
+        "x": 730,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "15281b9ca9c9f020",
+        "type": "function",
+        "z": "584a8e8db72522a6",
+        "name": "時刻変換",
+        "func": "// 入力: msg.payload にミリ秒が入っている想定\nlet ms = Number(msg.payload);\n\n// 秒へ変換\nlet totalSec = Math.floor(ms / 1000);\n\n// 時・分・秒へ変換\nlet hours = Math.floor(totalSec / 3600);\nlet minutes = Math.floor((totalSec % 3600) / 60);\nlet seconds = totalSec % 60;\n\n// 2桁ゼロ埋め\nlet hh = (\"0\" + hours).slice(-2);\nlet mm = (\"0\" + minutes).slice(-2);\nlet ss = (\"0\" + seconds).slice(-2);\n\n// 表示用の文字列\nmsg.payload = `${hh}:${mm}:${ss}`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 180,
+        "wires": [
+            [
+                "770dd2018ebd84a4",
+                "11cd02d87f7ae617"
+            ]
+        ]
+    },
+    {
+        "id": "11cd02d87f7ae617",
+        "type": "ui_text",
+        "z": "584a8e8db72522a6",
+        "group": "e4077180251266fb",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "現在時刻",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "16",
+        "color": "#000000",
+        "x": 740,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "579be1cf06047519",
+        "type": "ui_led",
+        "z": "584a8e8db72522a6",
+        "order": 3,
+        "group": "e4077180251266fb",
+        "width": 0,
+        "height": 0,
+        "label": "知らせ灯",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#fef606",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "color": "#000000",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "知らせ灯",
+        "x": 740,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "a64e71ba3675bc72",
+        "type": "function",
+        "z": "584a8e8db72522a6",
+        "name": "小数点以下切り上げ",
+        "func": "let speed = Number(msg.payload);\nmsg.payload = Math.ceil(speed);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 500,
+        "wires": [
+            [
+                "b82f6a318d395e2f",
+                "c3cb711e8427eb0e"
+            ]
+        ]
+    },
+    {
+        "id": "2ad016cc36ef20d6",
+        "type": "function",
+        "z": "584a8e8db72522a6",
+        "name": "小数点以下四捨五入",
+        "func": "// 入力された距離（m単位）を取得\nlet distance = Number(msg.payload);\n\n// 数値でない場合はそのまま返す\nif (isNaN(distance)) {\n    msg.payload = \"Invalid value\";\n    return msg;\n}\n\n// 距離を四捨五入（整数に）\nlet rounded = Math.round(distance);\n\n// km と m に分割\nlet km = Math.floor(rounded / 1000);\nlet m  = rounded % 1000;\n\n// m を3桁ゼロ埋め（例：5m → 005m）\nlet mStr = m.toString().padStart(3, \"0\");\n\n// 出力形式「〇km○○○m」\nmsg.payload = `${km}k${mStr}m`;\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 300,
+        "wires": [
+            [
+                "c446e715ee3643cf",
+                "119806d6c47a7a3f"
+            ]
+        ]
+    },
+    {
+        "id": "855cd77255564948",
+        "type": "mqtt in",
+        "z": "584a8e8db72522a6",
+        "name": "",
+        "topic": "bve/panel",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "4a40add566da79ce",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 900,
+        "wires": [
+            [
+                "8fecb0763a725522",
+                "e9a6c1c1190599c8",
+                "eea0436db1187af0",
+                "88f2bbdec3c40ab4",
+                "49be8fe7ed756ca4",
+                "1ee0f4e6d733c4e7",
+                "2504535f9eda89ba",
+                "b64fa5ad5112db73",
+                "c2372b5c84981cb6"
+            ]
+        ]
+    },
+    {
+        "id": "55ed86166b2f393d",
+        "type": "mqtt out",
+        "z": "584a8e8db72522a6",
+        "name": "力行",
+        "topic": "bve/power",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4a40add566da79ce",
+        "x": 1270,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1a4b8e0078e6faac",
+        "type": "ui_slider",
+        "z": "584a8e8db72522a6",
+        "name": "",
+        "label": "力行",
+        "tooltip": "",
+        "group": "e4077180251266fb",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "5",
+        "step": 1,
+        "className": "",
+        "x": 970,
+        "y": 300,
+        "wires": [
+            [
+                "55ed86166b2f393d"
+            ]
+        ]
+    },
+    {
+        "id": "ee67e07495e6a580",
+        "type": "mqtt out",
+        "z": "584a8e8db72522a6",
+        "name": "制動",
+        "topic": "bve/brake",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4a40add566da79ce",
+        "x": 1270,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "327c909beb855d29",
+        "type": "ui_slider",
+        "z": "584a8e8db72522a6",
+        "name": "",
+        "label": "制動",
+        "tooltip": "",
+        "group": "e4077180251266fb",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "9",
+        "step": 1,
+        "className": "",
+        "x": 970,
+        "y": 360,
+        "wires": [
+            [
+                "ee67e07495e6a580"
+            ]
+        ]
+    },
+    {
+        "id": "eb1c5edf04d1a583",
+        "type": "mqtt out",
+        "z": "584a8e8db72522a6",
+        "name": "レバーサ",
+        "topic": "bve/reverser",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4a40add566da79ce",
+        "x": 1280,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "e3b44f31b6827d62",
+        "type": "ui_slider",
+        "z": "584a8e8db72522a6",
+        "name": "",
+        "label": "レバーサ",
+        "tooltip": "",
+        "group": "e4077180251266fb",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-1",
+        "max": "1",
+        "step": 1,
+        "className": "",
+        "x": 980,
+        "y": 120,
+        "wires": [
+            [
+                "eb1c5edf04d1a583"
+            ]
+        ]
+    },
+    {
+        "id": "49be8fe7ed756ca4",
+        "type": "function",
+        "z": "584a8e8db72522a6",
+        "name": "ATS-P",
+        "func": "let arr = msg.payload;   // 受信した配列\n\nmsg.payload = arr[6];\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1260,
+        "wires": [
+            [
+                "c6bab61a68e32c47"
+            ]
+        ]
+    },
+    {
+        "id": "88f2bbdec3c40ab4",
+        "type": "function",
+        "z": "584a8e8db72522a6",
+        "name": "ブレーキ開放",
+        "func": "let arr = msg.payload;   // 受信した配列\n\nmsg.payload = arr[4];\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1200,
+        "wires": [
+            [
+                "80dd65dc188cb875"
+            ]
+        ]
+    },
+    {
+        "id": "eea0436db1187af0",
+        "type": "function",
+        "z": "584a8e8db72522a6",
+        "name": "ブレーキ動作",
+        "func": "let arr = msg.payload;   // 受信した配列\n\nmsg.payload = arr[5];\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1140,
+        "wires": [
+            [
+                "0972c21624525123"
+            ]
+        ]
+    },
+    {
+        "id": "e9a6c1c1190599c8",
+        "type": "function",
+        "z": "584a8e8db72522a6",
+        "name": "パターン接近",
+        "func": "let arr = msg.payload;   // 受信した配列\n\nmsg.payload = arr[3];\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1080,
+        "wires": [
+            [
+                "2fe2ac1ec84560f1"
+            ]
+        ]
+    },
+    {
+        "id": "8fecb0763a725522",
+        "type": "function",
+        "z": "584a8e8db72522a6",
+        "name": "P電源",
+        "func": "let arr = msg.payload;   // 受信した配列\n\nmsg.payload = arr[2];\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1020,
+        "wires": [
+            [
+                "b8fefb5c413be120"
+            ]
+        ]
+    },
+    {
+        "id": "b8fefb5c413be120",
+        "type": "ui_led",
+        "z": "584a8e8db72522a6",
+        "order": 3,
+        "group": "e4077180251266fb",
+        "width": 0,
+        "height": 0,
+        "label": "P電源",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#000000",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "P電源",
+        "x": 750,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "2fe2ac1ec84560f1",
+        "type": "ui_led",
+        "z": "584a8e8db72522a6",
+        "order": 3,
+        "group": "e4077180251266fb",
+        "width": 0,
+        "height": 0,
+        "label": "パターン接近",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#fef606",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "color": "#000000",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "パターン接近",
+        "x": 770,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "0972c21624525123",
+        "type": "ui_led",
+        "z": "584a8e8db72522a6",
+        "order": 3,
+        "group": "e4077180251266fb",
+        "width": 0,
+        "height": 0,
+        "label": "ブレーキ動作",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#fef606",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "color": "#000000",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "ブレーキ動作",
+        "x": 780,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "80dd65dc188cb875",
+        "type": "ui_led",
+        "z": "584a8e8db72522a6",
+        "order": 3,
+        "group": "e4077180251266fb",
+        "width": 0,
+        "height": 0,
+        "label": "ブレーキ開放",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#fef606",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "color": "#000000",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "ブレーキ開放",
+        "x": 780,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "c6bab61a68e32c47",
+        "type": "ui_led",
+        "z": "584a8e8db72522a6",
+        "order": 3,
+        "group": "e4077180251266fb",
+        "width": 0,
+        "height": 0,
+        "label": "ATS-P",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "color": "#000000",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "ATS-P",
+        "x": 750,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "1ee0f4e6d733c4e7",
+        "type": "function",
+        "z": "584a8e8db72522a6",
+        "name": "故障",
+        "func": "let arr = msg.payload;   // 受信した配列\n\nmsg.payload = arr[7];\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1320,
+        "wires": [
+            [
+                "9d1c7f6b64bd8b4b"
+            ]
+        ]
+    },
+    {
+        "id": "9d1c7f6b64bd8b4b",
+        "type": "ui_led",
+        "z": "584a8e8db72522a6",
+        "order": 3,
+        "group": "e4077180251266fb",
+        "width": 0,
+        "height": 0,
+        "label": "故障",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "color": "#000000",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "故障",
+        "x": 750,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "f868a612a1b3f51d",
+        "type": "mqtt in",
+        "z": "584a8e8db72522a6",
+        "name": "",
+        "topic": "bve/am",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "4a40add566da79ce",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 760,
+        "wires": [
+            [
+                "691400f65911ecda"
+            ]
+        ]
+    },
+    {
+        "id": "79dd64d79455b435",
+        "type": "debug",
+        "z": "584a8e8db72522a6",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "a1d73590be424996",
+        "type": "ui_gauge",
+        "z": "584a8e8db72522a6",
+        "name": "電流",
+        "group": "e4077180251266fb",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "電流",
+        "label": "A",
+        "format": "{{value}}",
+        "min": "-500",
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#00b500",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 730,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "691400f65911ecda",
+        "type": "function",
+        "z": "584a8e8db72522a6",
+        "name": "小数点以下切り上げ",
+        "func": "let am = Number(msg.payload);\nmsg.payload = Math.ceil(am);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 760,
+        "wires": [
+            [
+                "a1d73590be424996",
+                "79dd64d79455b435"
+            ]
+        ]
+    },
+    {
+        "id": "2504535f9eda89ba",
+        "type": "debug",
+        "z": "584a8e8db72522a6",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "5a58ab574eeaf24e",
+        "type": "mqtt in",
+        "z": "584a8e8db72522a6",
+        "name": "",
+        "topic": "opta/input",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "4a40add566da79ce",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 1460,
+        "wires": [
+            [
+                "47841867ff395198"
+            ]
+        ]
+    },
+    {
+        "id": "47841867ff395198",
+        "type": "debug",
+        "z": "584a8e8db72522a6",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "c2372b5c84981cb6",
+        "type": "function",
+        "z": "584a8e8db72522a6",
+        "name": "赤色灯",
+        "func": "let arr = msg.payload;   // 受信した配列\n\nmsg.payload = arr[1];\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 960,
+        "wires": [
+            [
+                "622fc31ff19bfa5f"
+            ]
+        ]
+    },
+    {
+        "id": "b64fa5ad5112db73",
+        "type": "function",
+        "z": "584a8e8db72522a6",
+        "name": "白色灯",
+        "func": "let arr = msg.payload;   // 受信した配列\n\nmsg.payload = arr[0];\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 900,
+        "wires": [
+            [
+                "6788afae67a34cc3"
+            ]
+        ]
+    },
+    {
+        "id": "6788afae67a34cc3",
+        "type": "ui_led",
+        "z": "584a8e8db72522a6",
+        "order": 3,
+        "group": "e4077180251266fb",
+        "width": 0,
+        "height": 0,
+        "label": "白色灯",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#000000",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "白色灯",
+        "x": 750,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "622fc31ff19bfa5f",
+        "type": "ui_led",
+        "z": "584a8e8db72522a6",
+        "order": 3,
+        "group": "e4077180251266fb",
+        "width": 0,
+        "height": 0,
+        "label": "赤色灯",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#000000",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "赤色灯",
+        "x": 750,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "7f5467c679980968",
+        "type": "mqtt in",
+        "z": "584a8e8db72522a6",
+        "name": "",
+        "topic": "bve/sound",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "4a40add566da79ce",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 1540,
+        "wires": [
+            [
+                "582c165ea02b9b48"
+            ]
+        ]
+    },
+    {
+        "id": "582c165ea02b9b48",
+        "type": "debug",
+        "z": "584a8e8db72522a6",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 1540,
+        "wires": []
+    }
+]
