@@ -1,6 +1,7 @@
 # Bve_Node-RED_Dashboard
 
 [Bve_MQTT_IO](https://github.com/yukinoshitaworks/Bve_MQTT_IO)(BVE Trainsim 用 MQTT 連携プラグイン)が発行する MQTT トピックを可視化・操作するための Node-RED ダッシュボードです。速度・距離程・時刻・パイロットランプ・ATS-P表示灯などをブラウザ上のダッシュボードで確認でき、力行/制動/レバーサをダッシュボードから逆にBVEへ送ることもできます。
+開発中のため画面のレイアウト等荒削りな箇所があります。Pull RequestやIssue歓迎です。
 
 ## 対応関係
 
