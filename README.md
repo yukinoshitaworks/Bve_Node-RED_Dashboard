@@ -1,12 +1,12 @@
 # Bve_Node-RED_Dashboard
 
-[Bve_MQTT_IO](https://github.com/yukinoshitaworks/Bve_MQTT_IO)(BVE Trainsim 用 MQTT 連携プラグイン)が発行する MQTT トピックを可視化・操作するための Node-RED ダッシュボードです。速度・距離程・時刻・パイロットランプ・ATS-P表示灯などをブラウザ上のダッシュボードで確認でき、力行/制動/レバーサをダッシュボードから逆にBVEへ送ることもできます。
+[Bve_MQTT_IO](https://github.com/yukinoshitaworks/Bve_MQTT_IO)(BVE Trainsim 用 MQTT 連携プラグイン)が発行する MQTT トピックを可視化・操作するための Node-RED ダッシュボードです。速度・距離程・時刻・パイロットランプ・ATS-P表示灯などをブラウザ上のダッシュボードで確認でき、力行/制動/レバーサをダッシュボードから逆にBVEへ送ることもできます。Bve trainsim 5.8.7554.391およびBveEX2.0.50428.1上でデフォルトの内房線/E217系で動作することを確認しています。
 開発中のため画面のレイアウト等荒削りな箇所があります。Pull RequestやIssue歓迎です。
 
 ## 対応関係
 
 ```
-BVE (BveEX_20251119)  <--MQTT-->  Node-RED (本フロー)  -->  ブラウザダッシュボード
+BVE (Bve_MQTT_IO)  <--MQTT-->  Node-RED (本フロー)  -->  ブラウザダッシュボード
 ```
 
 - BVE → MQTT → Node-RED: `bve/time` `bve/location` `bve/speed` `bve/pilot` `bve/panel` `bve/am` `bve/sound` を受信して表示
@@ -16,7 +16,11 @@ BVE (BveEX_20251119)  <--MQTT-->  Node-RED (本フロー)  -->  ブラウザダ�
 
 - [Node.js](https://nodejs.org/)(Node-RED が動作するバージョン。LTS推奨)
 - [Node-RED](https://nodered.org/) 本体
-- MQTT ブローカー(例: [Mosquitto](https://mosquitto.org/))が、BVE側([Bve_MQTT_IO](https://github.com/yukinoshitaworks/Bve_MQTT_IO))と同じものに到達できること
+- MQTT ブローカー(例: [mosquitto](https://mosquitto.org/))が、BVE側([Bve_MQTT_IO](https://github.com/yukinoshitaworks/Bve_MQTT_IO))と同じものに到達できること
+- 作者の環境ではMQTTブローカーはmosquittoを使用しています。環境構築は以下が詳しいです[mosquitto](https://qiita.com/yomori/items/74a9af05a8ccdda12e2f)
+- "C:\Program Files\mosquitto\mosquitto.conf"でlistenerでポート番号1883を追加し、自宅内等のネットワークであればログイン認証は不要で設定しておくとよいでしょう。
+- ファイアウォールの設定も併せてお願いします。
+- mosquitto及びNode-redはWindowsスタートアップ時の自動起動を設定しておくと今まで通りにBveを立ち上げるだけでプレイ可能です。
 
 ## セットアップ手順
 
@@ -69,8 +73,17 @@ BVE (BveEX_20251119)  <--MQTT-->  Node-RED (本フロー)  -->  ブラウザダ�
 | レバーサ | `bve/reverser` | スイッチ(BVEへ送信) |
 | P電源 / パターン接近 / ブレーキ動作 / ブレーキ開放 / ATS-P | `bve/panel` | LED表示(各パネル配列要素に対応) |
 
+
+## 使用方法
+1.mosquittoを起動する
+
+2.Node-REDを起動する
+
+3.通常通りBveEXをインストールしたBve trainsim5.8を起動する。
+
 ## 注意事項
 
 - `flows_cred.json`(暗号化された認証情報)、`settings.js`(管理者認証・セキュリティ設定)、`node_modules` はこのリポジトリに含めていません。環境ごとに個別に用意してください
 - MQTTブローカーのホスト/ポートはフロー内の `mqtt-broker` 設定ノードで管理されています。インポート後、必ず自分の環境に合わせて設定し直してください
 - ダッシュボード内には本プロジェクト(BVE連携)と直接関係のない汎用ウィジェット(天気・世界地図・タイマーなど)も同居しています
+
